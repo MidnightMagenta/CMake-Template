@@ -8,7 +8,6 @@ set(Subsystem "CONSOLE")
 project("${ProjectName}" VERSION 0.1)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHsc")
-find_package(OpenGL REQUIRED)
 
 add_custom_target(q_start_clock ALL
     COMMENT "Starting console clock"
