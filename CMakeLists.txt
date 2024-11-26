@@ -22,12 +22,4 @@ add_executable("${ProjectName}"
         #header files
 )
 
-if(Subsystem STREQUAL "CONSOLE")
-    set_target_properties("${ProjectName}" PROPERTIES LINK_FLAGS /SUBSYSTEM:CONSOLE)
-    target_compile_definitions("${ProjectName}" PRIVATE SUBSYSTEM_CONSOLE)
-elseif (Subsystem STREQUAL "WINDOWS")
-    set_target_properties("${ProjectName}" PROPERTIES LINK_FLAGS /SUBSYSTEM:WINDOWS)
-    target_compile_definitions("${ProjectName}" PRIVATE SUBSYSTEM_WINDOWS)
-endif ()
-
 add_dependencies("${ProjectName}" q_start_clock)
